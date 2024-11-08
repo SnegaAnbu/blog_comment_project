@@ -1,0 +1,10 @@
+{% extends 'blog_api/base.html' %}
+
+{% block content %}
+    <h2>Comment on {{ post.title }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Comment</button>
+    </form>
+{% endblock %}
